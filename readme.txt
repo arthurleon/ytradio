@@ -1,0 +1,11 @@
+CREATE DATABASE ytradio DEFAULT CHARSET=utf8;
+
+CREATE TABLE audioclip (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, band_id INT, album_id INT, url VARCHAR(256), tags VARCHAR(256));
+
+ALTER TABLE audioclip ADD songname VARCHAR(256);
+
+CREATE TABLE band (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(256), website VARCHAR(256), facebook VARCHAR(256), metalarchives VARCHAR(256), deezer VARCHAR(256), spotfy VARCHAR(256));
+
+CREATE TABLE album (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, band_id INT, name VARCHAR(256), year INT, promolink VARCHAR(256), metalarchives VARCHAR(256));
+
+CREATE TABLE user (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(256), email VARCHAR(256), password VARCHAR(256), registration date, level int);
