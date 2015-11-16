@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/11/2015, 08:42:13
+    Author     : arthur
+*/
+
+@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1200px;
+
+// Define screen sizes
+$mobile-size: 480px;
+$tablet-size: 768px;
+$desktop-size: 1024px;
+$nav-breakpoint: 1000px;
+
+// Define your breakpoints
+$mobile: new-breakpoint(max-width em($mobile-size - 1) 2);
+$tablet: new-breakpoint(min-width em($mobile-size) max-width em($tablet-size) 4);
+$large: new-breakpoint(min-width em($tablet-size + 1) max-width em($desktop-size - 1) 8);
+$x-large: new-breakpoint(min-width em($desktop-size));

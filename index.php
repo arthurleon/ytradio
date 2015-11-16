@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue_grey-red.min.css" />
+        <meta charset="UTF-8">       
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="assets/main.css">
         <title>YouTube Radio</title>
         <style>
             article {
@@ -29,70 +29,50 @@
             $width = '640px';
             $height = '360px';
         ?>                          
-    <!-- GOOGLE MATERIAL LAYOUT-->
-    <!-- Always shows a header, even in smaller screens. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title">YouTube Metal Radio</span>
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation. We hide it in small screens. -->
-          <nav class="mdl-navigation mdl-layout--large-screen-only">            
-            <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+    <!-- Container -->    
+    <header class="navigation" role="banner">
+        <div class="navigation-wrapper">                   
+                <a href="javascript:void(0)" class="logo">
+                    <img src="assets/images/ytradio.png" alt="YouTube Radio">
+                </a>                
+            </nav>
         </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Menu</span>
-        <nav class="mdl-navigation">          
-          <a class="mdl-navigation__link" href="">Link</a>
-        </nav>
-      </div>
-      <main class="mdl-layout__content">
-          <div class="page-content">
-              
-              
-            <!-- START CONTENT HERE -->
-            <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--12-col">
-                    <article>
-                        <div id="ytplayer"></div>
-                        <div id="song_info">
-                            <p id="song_name">Song name: <?php echo "Soon.."; ?></p>
-                        </div>                        
-                    </article>                    
-                </div>
-            </div>  
-            <!-- END CONTENT -->
-            
-            
-          </div>
-      </main>
-        
-        
-      <!-- GOOLE MATERIAL FOOTER -->        
-        <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-          <div class="mdl-logo">
-            More Information
-          </div>
-          <ul class="mdl-mini-footer__link-list">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy and Terms</a></li>
-            <li><a href="#">User Agreement</a></li>
-          </ul>
-        </div>
-        <div class="mdl-mini-footer__right-section">
-          <button class="mdl-mini-footer__social-btn"></button>
-          <button class="mdl-mini-footer__social-btn"></button>
-          <button class="mdl-mini-footer__social-btn"></button>
-        </div>
-        </footer>    
-        <!-- GOOLE MATERIAL END-->  
-        
-        
+    </header>
+    <div class="container">
+        <main>            
+            <section class="main-section">                            
+            <!-- START CONTENT HERE -->                
+                <article>
+                    <div id="ytplayer"></div>
+                    <footer id="song_info">
+                        <p id="song_name">Song name: <?php echo "Soon.."; ?></p>
+                    </footer>                    
+                </article>                                      
+            <!-- END CONTENT -->                      
+            </section>
+            <section class="album-section">
+                <article>
+                    <div class="album-img"></div>
+                    <div class="album-data"></div>
+                    <div class="album-sell"></div>
+                </article>
+            </section>
+            <section class="merchan-section">
+                <article>
+                    <div class="merchan-img"></div>                    
+                    <div class="merchan-sell"></div>
+                </article>
+            </section>
+            </section>
+            <section class="band-section">
+                <article>
+                    <div class="band-website"></div>                    
+                    <div class="band-facebook"></div>
+                    <div class="band-country"></div>
+                    <div class="band-metal-archives"></div>
+                </article>
+            </section>            
+        </main>                               
     </div>    
     <!-- END GOOGLE MATERIAL LAYOUT-->        
         
