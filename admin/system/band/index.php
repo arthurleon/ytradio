@@ -9,7 +9,9 @@
     foreach ($bands->getResult() as $band){
         echo "id: {$band['id']}<br>";
         echo "name: {$band['name']}<br>";
-        echo "name: {$band['website']}<br>";
-        echo "name: {$band['facebook']}<br>";
+        echo "website: {$band['website']}<br>";
+        echo "facebook: {$band['facebook']}<br>";
+        echo "metalarchives: {$band['metalarchives']}<br>";
+        echo "country: {$band['country']}<br>";
     }
 ?>

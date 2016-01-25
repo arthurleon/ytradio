@@ -62,7 +62,19 @@ endif;
                 <span class="field">Facebook:</span>                
             </label>
             <input type="text" name="facebook" value="<?php if (isset($data)) echo $data['facebook']; ?>" />
-            <br><br>            
+            <br><br>
+            
+            <label class="label">
+                <span class="field">Metal Archives:</span>
+            </label>
+            <input type="text" name="metalarchives" value="<?php if (isset($data)) echo $data['metalarchives']; ?>" />
+            <br><br>
+            
+            <label class="label">
+                <span class="field">Country:</span>                
+            </label>
+            <input type="text" name="country" value="<?php if (isset($data)) echo $data['country']; ?>" />
+            <br><br>
 
             <input type="submit" class="btn blue" value="Atualizar Banda" name="SendPostForm" />
         </form>

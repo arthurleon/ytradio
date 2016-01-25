@@ -1,5 +1,5 @@
 <?php
-
+require_once 'credentials.php';
 // SITE CONFIG ##########################
 // Base
 define(HOME, 'http://localhost/ytradio/');

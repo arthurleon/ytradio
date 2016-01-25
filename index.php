@@ -4,7 +4,7 @@
         <meta charset="UTF-8">       
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="assets/main.css">
-        <title>YouTube Radio</title>
+        <title>AvengerBR Radio</title>
         <style>
             article {
                 width: 640px;
@@ -18,7 +18,7 @@
             }         
         </style>
     </head>
-    <body>
+    <body>      
     <?php
             require_once '_app/config.inc.php';
             $playlist = new Audioclip();
@@ -33,7 +33,7 @@
     <header class="navigation" role="banner">
         <div class="navigation-wrapper">                   
                 <a href="javascript:void(0)" class="logo">
-                    <img src="assets/images/ytradio.png" alt="YouTube Radio">
+                    <img src="assets/images/ytradio.png" alt="AvengerBR Radio">
                 </a>                
             </nav>
         </div>
@@ -127,6 +127,16 @@
                 current++;
                 player.loadVideoById(playlist[current]);            
           }
+        </script>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1835205-1', 'auto');
+  ga('send', 'pageview');
+
         </script>
     </body>
 </html>

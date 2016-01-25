@@ -31,5 +31,11 @@
     <br><br>
     <label>Facebook:</label>
     <input type="text" name="facebook" value="<?php if(isset($data)) {echo $data['facebook'] ;} ?>">
+    <br><br>
+    <label>Metal Archives:</label>
+    <input type="text" name="metalarchives" value="<?php if(isset($data)) {echo $data['metalarchives'] ;} ?>">
+    <br><br>
+    <label>Country:</label>
+    <input type="text" name="country" value="<?php if(isset($data)) {echo $data['country'] ;} ?>">
     <br><br><input type="submit" value="Cadastrar" name="SendPostForm">
 </form>
