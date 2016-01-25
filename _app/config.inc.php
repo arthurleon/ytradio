@@ -4,12 +4,6 @@ require_once 'credentials.php';
 // Base
 define(HOME, 'http://localhost/ytradio/');
 
-// Banco de dados
-define(HOST, 'localhost');
-define(USER, 'root');
-define(PASS, '9hammer9');
-define(DBSA, 'ytradio');
-
 //set brazillian date
 date_default_timezone_set("America/Sao_Paulo");
 
