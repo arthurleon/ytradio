@@ -13,5 +13,6 @@
         echo "facebook: {$band['facebook']}<br>";
         echo "metalarchives: {$band['metalarchives']}<br>";
         echo "country: {$band['country']}<br>";
+        echo "<a href='http://localhost/ytradio/admin/panel.php?exe=band/update&id={$band['id']}'>Editar</a><br><br>";
     }
 ?>

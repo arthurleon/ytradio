@@ -10,8 +10,13 @@ class Audioclip {
     
     private $ResultSet;
     private $FullResultSet;
+    private $Data;
+    private $AudioclipId;
     private $Result;
     private $Error;
+
+    //Nome da tabela no banco de dados!
+    const Entity = 'audioclip';
     
     public function ExeCreate(array $Data) {
         $this->Data = $Data;
@@ -25,6 +30,19 @@ class Audioclip {
                 $this->setData();           
                 $this->Create();
             endif;
+        endif;
+    }
+
+    public function ExeUpdate($AudioclipId, array $Data) {
+        $this->AudioclipId = (int) $AudioclipId;
+        $this->Data = $Data;
+
+        if ($this->Data['url'] === ''):
+            $this->Result = false;
+            $this->Error = ["<b>Erro ao atualizar:</b> Para atualizar clipe {$this->Data['url']}, preencha o campo url!", WS_ALERT];
+        else:
+            $this->setData();            
+            $this->Update();
         endif;
     }
     
@@ -77,6 +95,15 @@ class Audioclip {
         if ($Create->getResult()):
             $this->Result = $Create->getResult();
             $this->Error = ["<b>Success:</b> Audioclip added!", WS_ACCEPT];
+        endif;
+    }
+    
+    private function Update() {
+        $Update = new Update;
+        $Update->ExeUpdate(self::Entity, $this->Data, "WHERE id = :id", "id={$this->AudioclipId}");
+        if ($Update->getResult()):            
+            $this->Result = $Update->getResult();
+            $this->Error = ["<b>Sucesso:</b> A {$this->Data['url']} foi atualizada no sistema!", WS_ACCEPT];
         endif;
     }
     

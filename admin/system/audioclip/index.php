@@ -10,6 +10,7 @@
         echo "id: {$audioclip['id']}<br>";
         echo "url: {$audioclip['url']}<br>";
         echo "tags: {$audioclip['tags']}<br>";
-        echo "songname: {$audioclip['songname']}<br><br>";
+        echo "songname: {$audioclip['songname']}<br>";
+        echo "<a href='http://localhost/ytradio/admin/panel.php?exe=audioclip/update&id={$audioclip['id']}'>Editar</a><br><br>";
     }
 ?>

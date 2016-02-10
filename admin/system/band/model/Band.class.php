@@ -137,6 +137,6 @@ class Band {
             $this->Result = $Update->getResult();
             $this->Error = ["<b>Sucesso:</b> A {$this->Data['name']} foi atualizada no sistema!", WS_ACCEPT];
         endif;
-    }    
+    }
 
 }
